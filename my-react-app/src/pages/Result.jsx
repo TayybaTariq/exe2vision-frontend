@@ -1,0 +1,108 @@
+import { useLocation, useNavigate } from "react-router-dom";
+import HeaderLogin from "../components/HeaderAfterLogin";
+import { ShieldCheck, Calendar, File, Target, Shield } from "lucide-react";
+
+
+const ResultPage=()=> {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+
+  const {
+    fileName = "Unknown.exe",
+    date = "N/A",
+    confidence = "N/A",
+    status = "Benign",
+  } = location.state || {};
+
+  return (
+    <div className="min-h-screen bg-[#0A1324] text-white px-4 pt-24">
+
+      <h1 className="text-center text-3xl md:text-4xl font-bold mb-10">
+        Scan Results
+      </h1>
+
+      {/* Main Card */}
+      <div className="w-full max-w-5xl mx-auto bg-[#111C33] rounded-2xl shadow-xl p-8 md:p-14">
+
+        {/* Top Section */}
+        <div className="flex flex-col items-center">
+          <div className="w-20 h-20 rounded-full bg-[#0A1324] flex items-center justify-center">
+            <ShieldCheck size={50} className="text-green-400" />
+          </div>
+
+          <h2 className="text-green-400 text-xl md:text-2xl font-semibold mt-4">
+            File is {status}
+          </h2>
+
+          <p className="text-gray-300 text-center max-w-xl mt-3">
+            Our AI model has analyzed this file and found no signs of malicious behavior.
+            The file appears to be safe.
+          </p>
+        </div>
+
+        {/* Data Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+
+          {/* Filename */}
+          <div className="bg-[#0D162A] p-5 rounded-xl">
+            <div className="flex items-center gap-2 text-cyan-300 mb-2">
+              <File size={18} /> <span>Filename</span>
+            </div>
+            <p className="text-white font-semibold break-all">{fileName}</p>
+          </div>
+
+          {/* Scan Date */}
+          <div className="bg-[#0D162A] p-5 rounded-xl">
+            <div className="flex items-center gap-2 text-cyan-300 mb-2">
+              <Calendar size={18} /> <span>Scan Date</span>
+            </div>
+            <p className="text-white font-semibold">{date}</p>
+          </div>
+
+          {/* Confidence Score */}
+          <div className="bg-[#0D162A] p-5 rounded-xl">
+            <div className="flex items-center gap-2 text-cyan-300 mb-2">
+              <Target size={18} /> <span>Confidence Score</span>
+            </div>
+            <p className="text-white font-semibold">
+              {confidence} <span className="text-green-400 ml-2">High</span>
+            </p>
+          </div>
+
+          {/* Status */}
+          <div className="bg-[#0D162A] p-5 rounded-xl">
+            <div className="flex items-center gap-2 text-cyan-300 mb-2">
+              <Shield size={18} /> <span>Status</span>
+            </div>
+            <p className="text-green-400 font-semibold">Safe</p>
+          </div>
+        </div>
+
+        {/* Buttons */}
+        <div className="flex flex-col md:flex-row gap-4 mt-10">
+          <button className="bg-cyan-500 hover:bg-cyan-600 text-white w-full py-3 rounded-xl font-semibold flex justify-center items-center gap-2">
+            ⬇ Download PDF Report
+          </button>
+
+          <button
+            onClick={() => navigate("/scanmalware")}
+            className="bg-transparent border border-gray-500 hover:border-cyan-400 hover:text-cyan-400 w-full py-3 rounded-xl font-semibold"
+          >
+            Scan Another File
+          </button>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
+export default function ProgressComponent() {
+  return (
+    <div className="min-h-screen bg-[#0f172a] text-white font-sans overflow-x-hidden">
+      <HeaderLogin />
+      <ResultPage />
+    </div>
+  );
+}
