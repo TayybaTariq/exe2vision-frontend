@@ -16,31 +16,36 @@ export default function LoginPage() {
   const validateEmail = (email) => /\S+@\S+\.\S+/.test(email);
 
   const handleLogin = () => {
-    let tempErrors = { email: "", password: "" };
-    let valid = true;
+  let tempErrors = { email: "", password: "" };
+  let valid = true;
 
-    if (!email) {
-      tempErrors.email = "Email is required";
-      valid = false;
-    } else if (!validateEmail(email)) {
-      tempErrors.email = "Enter a valid email";
-      valid = false;
-    }
+  if (!email) {
+    tempErrors.email = "Email is required";
+    valid = false;
+  } else if (!validateEmail(email)) {
+    tempErrors.email = "Enter a valid email";
+    valid = false;
+  }
 
-    if (!password) {
-      tempErrors.password = "Password is required";
-      valid = false;
-    } else if (password.length < 6) {
-      tempErrors.password = "Password must be at least 6 characters";
-      valid = false;
-    }
+  if (!password) {
+    tempErrors.password = "Password is required";
+    valid = false;
+  } else if (password.length < 6) {
+    tempErrors.password = "Password must be at least 6 characters";
+    valid = false;
+  }
 
-    setErrors(tempErrors);
+  setErrors(tempErrors);
 
-    if (valid) {
-      navigate("/scanmalware");
-    }
-  };
+  if (!valid) return;
+
+  // 🔥 ROLE CHECK / ROUTING LOGIC
+  if (email === "tayyba@gmail.com" && password === "123456") {
+    navigate("/admin-dashboard");  // Admin route
+  } else {
+    navigate("/scanmalware");  // Normal user route
+  }
+};
 
   return (
     <div className="min-h-screen bg-[#0A1324] flex flex-col items-center justify-center p-4 md:p-6 lg:p-8">
