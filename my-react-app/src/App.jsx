@@ -13,6 +13,7 @@ import ScanMalware from "./pages/ScanMalware.jsx";
 import ProgressBar from "./pages/ProgressBar.jsx";
 import Result from "./pages/Result.jsx";
 import ScanHistoryComponent from "./pages/ScanHistory";
+import AdminPage from "./pages/AdminPage.jsx";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/progress" element={<ProgressBar />} />
           <Route path="/result" element={<Result />} />
           <Route path="/scanhistory" element={<ScanHistoryComponent />} />
+           <Route path="/admin-dashboard" element={<AdminPage />} />
   
         </Routes>
       </div>

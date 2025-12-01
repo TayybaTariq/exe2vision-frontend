@@ -30,7 +30,7 @@ const ResearchMethodology = () => {
     ];
 
     return (
-        <section id="research" className="py-20 bg-gray-950">
+        <section id="research" className="py-20 bg-gray-900">
             <div className="max-w-4xl mx-auto px-4 md:px-10 lg:px-20 text-center">
                 <h2 className="text-3xl font-bold text-white mb-2">Research Methodology</h2>
                 <p className="text-lg text-gray-400 mb-12">

@@ -31,8 +31,8 @@ const AdvantagesAndFooter = () => {
                     </div>
                 </div>
 
-                {/* University Footer Block */}
-                <div className="p-8 bg-gray-800 rounded-3xl border border-gray-700 shadow-2xl text-center">
+           
+                {/* <div className="p-8 bg-gray-800 rounded-3xl border border-gray-700 shadow-2xl text-center">
                     <img 
                         src={universityImageUrl} 
                         alt="University building" 
@@ -43,7 +43,7 @@ const AdvantagesAndFooter = () => {
                     <p className="text-sm text-gray-400 max-w-lg mx-auto">
                         This research project is conducted at UET Lahore's Department of Computer Science, contributing to the advancement of cybersecurity research and artificial intelligence applications.
                     </p>
-                </div>
+                </div> */}
             </div>
         </section>
     );

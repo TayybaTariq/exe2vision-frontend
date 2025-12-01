@@ -1,6 +1,7 @@
 import React from 'react';
 import Metrics from './PerformanceMetrics.jsx';
 import { ArrowRight } from './SVGIcons.jsx'
+import header from '../assets/malwarewebsiteheader.jpg'
 
 const HeroSection = () => {
   const primaryBtnClass = "flex items-center justify-center bg-cyan-500 hover:bg-cyan-400 text-gray-900 font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:translate-y-[-2px] shadow-lg shadow-cyan-500/50";
@@ -47,7 +48,7 @@ const HeroSection = () => {
           {/* Image Container with Custom Border Style */}
           <div className="p-4 rounded-[2rem] bg-gray-900 shadow-2xl border border-cyan-700/60 overflow-hidden">
             <img 
-              src="https://placehold.co/500x350/1e293b/a5f3fc?text=Advanced+Analysis+Screen"
+              src={header}
               alt="Person analyzing code on multiple dark monitors" 
               className="rounded-xl w-full h-auto object-cover border border-gray-800/50"
               onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/500x350/1e293b/a5f3fc?text=Placeholder+Image"; }}

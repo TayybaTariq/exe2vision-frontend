@@ -2,6 +2,7 @@ import React from 'react';
 import ResearchMethodology from '../components/ResearchMethadology';
 import AdvantagesAndFooter from '../components/Footer';
 import Header from '../components/Header';
+import AboutUsSection from '../components/AboutUs';
 
 // Main App Component (Wrapper)
 export default function AboutResearch() {
@@ -14,6 +15,8 @@ export default function AboutResearch() {
       
       {/* 4. Advantages and Footer Block */}
       <AdvantagesAndFooter/>
+      <AboutUsSection />
+      
     </div>
   );
 }

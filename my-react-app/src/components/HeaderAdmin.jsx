@@ -22,7 +22,7 @@ const Header = () => (
         to="/admin-dashboard"
         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm md:text-base flex items-center space-x-2 font-medium py-1 px-2 rounded-lg"
       >
-        <UserCogIcon className="w-4 h-4 text-cyan-400" />
+        
         <span>Admin Dashboard</span>
       </Link>
       

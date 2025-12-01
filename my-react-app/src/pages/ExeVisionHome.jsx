@@ -18,11 +18,7 @@ export default function ExeVisionHome() {
       {/* 2. How It Works Section */}
       <HowItWorks />
       
-      {/* 3. Research Methodology Section */}
-      <ResearchMethodology />
-      
-      {/* 4. Advantages and Footer Block */}
-      <AdvantagesAndFooter/>
+     
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
+
 import AdminDashboard from '../components/AdminDashboard';
+import Header from '../components/HeaderAdmin';
 
 
 // Main App Component (Wrapper)
