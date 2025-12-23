@@ -8,7 +8,7 @@ const HeroSection = () => {
   const secondaryBtnClass = "text-white font-medium py-3 px-6 rounded-xl border border-gray-700 hover:bg-gray-800 transition-colors";
 
   return (
-    <section className="max-w-7xl mx-auto p-4 md:p-10 lg:p-20 pt-32">
+    <section className="max-w-7xl mx-auto p-4 md:p-10 lg:p-20 pt-32 mt-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT COLUMN: Text Content & CTAs */}
